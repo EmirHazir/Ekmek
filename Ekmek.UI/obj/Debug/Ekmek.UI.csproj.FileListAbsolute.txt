@@ -20,3 +20,7 @@ C:\Users\Emir Hazir\Documents\Visual Studio 2017\Projects\Ekmek\Ekmek.UI\obj\Deb
 C:\Users\Emir Hazir\Documents\Visual Studio 2017\Projects\Ekmek\Ekmek.UI\obj\Debug\Ekmek.UI.csproj.CoreCompileInputs.cache
 C:\Users\Emir Hazir\Documents\Visual Studio 2017\Projects\Ekmek\Ekmek.UI\obj\Debug\Ekmek.UI.dll
 C:\Users\Emir Hazir\Documents\Visual Studio 2017\Projects\Ekmek\Ekmek.UI\obj\Debug\Ekmek.UI.pdb
+C:\Users\Emir Hazir\Documents\Visual Studio 2017\Projects\Ekmek\Ekmek.UI\bin\EntityFramework.dll
+C:\Users\Emir Hazir\Documents\Visual Studio 2017\Projects\Ekmek\Ekmek.UI\bin\EntityFramework.SqlServer.dll
+C:\Users\Emir Hazir\Documents\Visual Studio 2017\Projects\Ekmek\Ekmek.UI\bin\EntityFramework.xml
+C:\Users\Emir Hazir\Documents\Visual Studio 2017\Projects\Ekmek\Ekmek.UI\bin\EntityFramework.SqlServer.xml

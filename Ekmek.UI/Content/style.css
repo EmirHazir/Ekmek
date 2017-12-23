@@ -1,3 +1,7 @@
+body,html{
+    font-family:Play;
+}
+
 .footer{
  padding-top: 10px; 
 }
@@ -5,8 +9,25 @@
 #write-review{
     margin:-50px;
 }
-.product-price{
-    font-family: fantasy;
-    font-size: 26px;
-    color: rgb(204, 13, 45);
+.card .baslik {
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1.35em;
+    color: rgb(178, 119, 60);
+    height:35px;
 }
+#resim {
+    height:145px;
+} 
+
+.card .description {
+    height: 100px;
+    font-size: 16px;
+}
+.card .product-price {
+    font-family: Play;
+    color: rgb(255, 0, 0);
+    font-weight: 700;
+    font-size: 17px;
+}
+

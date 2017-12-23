@@ -1,0 +1,27 @@
+﻿@using Ekmek.UI.ViewModels;
+@model IEnumerable<ProductVM>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-2">
+            <div class="card">
+                <a href="/Home/Details/@item.Id">
+                    <img id="resim" class="card-img-top img-fluid" src="~/Upload/img/@item.Image" alt="@item.ProductName">
+                </a>
+                <div class="card-body">
+                    <h4 class="card-title baslik">
+                        <a href="/Home/Details/@item.Id">@item.ProductName</a>
+                    </h4>
+                    <p class="card-text description">@item.Description.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted product-price">
+                        <i class="fa fa-try" aria-hidden="true"></i>
+                        @item.Price
+                    </small>
+                </div>
+            </div>
+        </div>
+    }
+</div>

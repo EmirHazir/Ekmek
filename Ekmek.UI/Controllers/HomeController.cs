@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Ekmek.UI.Entity;
+using Ekmek.UI.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,19 +10,48 @@ namespace Ekmek.UI.Controllers
 {
     public class HomeController : Controller
     {
+        MyDataContext context = new MyDataContext();
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            var urunler = context.Products
+                .Where(i => i.IsHome == true && i.IsApproved == true)
+                .Select(i => new ProductVM()
+                {
+                    Id = i.Id,
+                    ProductName = i.ProductName.Length > 30 ? i.ProductName.Substring(0, 15) + "..." : i.ProductName,
+                    Description = i.Description.Length > 50 ? i.Description.Substring(0, 47) + "..." : i.Description,
+                    Price = i.Price,
+                    Stock = i.Stock,
+                    Image = i.Image ?? "DefaultImage.jpg",
+                    CategoryID = i.CategoryID
+                }).ToList();
+
+            return View(urunler);
         }
-        public ActionResult Details()
+        public ActionResult Details(int id)
         {
-            return View();
+            var urunler = context.Products.Where(i => i.Id == id).FirstOrDefault();
+            return View(urunler);
         }
 
         public ActionResult ShowList()
         {
-            return View();
+            var urunler = context.Products
+                .Where(i => i.IsApproved == true)
+                .Select(i => new ProductVM()
+                {
+                    Id = i.Id,
+                    ProductName = i.ProductName.Length > 30 ? i.ProductName.Substring(0, 15) + "..." : i.ProductName,
+                    Description = i.Description.Length > 50 ? i.Description.Substring(0, 47) + "..." : i.Description,
+                    Price = i.Price,
+                    Stcok = i.Stcok,
+                    Image = i.Image ?? "DefaultImage.jpg",
+                    CategoryID = i.CategoryID
+
+                }).ToList();
+
+            return View(urunler);
         }
     }
 }
