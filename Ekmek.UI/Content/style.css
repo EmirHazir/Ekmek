@@ -1,0 +1,12 @@
+.footer{
+ padding-top: 10px; 
+}
+
+#write-review{
+    margin:-50px;
+}
+.product-price{
+    font-family: fantasy;
+    font-size: 26px;
+    color: rgb(204, 13, 45);
+}
